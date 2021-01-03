@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Registration page</title>
+<style>
+body 
+{
+background: linear-gradient(to bottom, #ffcc99 0%, #ff99cc 100%);
+}
+</style>
+</head>
+<body>
+<script>
+function validate()
+{
+	var number=document.form2.Phone_number.value;
+	var mail_id=document.form2.E_mail.value;
+	var mail=/^[a-zA-Z0-9_]*[@][gmail.com]/
+	alert(number.length);
+	if(number.length!=10)
+	{
+		alert("Invalid phone number");
+		return false;
+	}
+	if(!mail_id.match(mail))
+	{
+		alert("Invalid email id");
+		return false;
+	}
+	return true;
+}
+</script>
+<form name="form2">
+<table>
+<tr>
+<td>Name:</td>
+<td><input type="text" name="Name"></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="Password"></td>
+</tr>
+<tr>
+<td>e-mail id:</td>
+<td><input type="text" name="E-mail"></td>
+</tr>
+<tr>
+<td>Phone no.:</td>
+<td><input type="text" name="Phone_number"></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td><input type="radio" name="Gender" value="Male" checked>Male </td>
+<td><input type="radio" name="Gender" value="Female">Female</td>
+</tr>
+<tr>
+<td><label>Date of birth:</label></td>
+<td><input type="date"></td>
+</tr>
+<tr>
+<td>Languages known:</td>
+<td><input type="checkbox">English</td>
+<td><input type="checkbox">Telugu</td>
+<td><input type="checkbox">Hindi</td>
+<td><input type="checkbox">Tamil</td>
+</tr>
+<tr>
+<td>Address:</td>
+<td><textarea rows=4 columns=30>Enter address here...</textarea></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><input type="submit" value="REGISTER" onclick="return validate()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

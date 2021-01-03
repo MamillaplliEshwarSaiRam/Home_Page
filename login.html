@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>  login</title>
+<style>
+body 
+{
+background: linear-gradient(to bottom, #ffcc99 0%, #ff99cc 100%);
+}
+</style>
+</head>
+<body>
+<script>
+function validate()
+{
+	var input_id=document.form1.Login.value;
+	var login_id1=/^[1][7][0][7][1][A][0][5][i-zI-Z0-9]*$/;
+	var login_id2=/^[1][8][0][7][1][A][0][5][a-zA-Z0-9]*$/;
+	if(input_id.length==11)
+	{
+		alert("Valid login id");
+		return true;
+	}
+	else
+	{
+		alert("Invalid login id");
+		return false;
+	}
+	
+}
+</script>
+<marquee><font size=10% color="blue">Login Page</font></marquee>
+<form name="form1">
+<table>
+<tr>
+<td>
+Username:</td>
+<td>
+<input type="text" name="Login"><br>
+</td>
+</tr>
+<tr>
+<td>
+Password:</td>
+<td>
+<input type="text" name="Password"><br>
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit" onclick="return validate()"></td>
+<td>
+
+<input type="reset"></td>
+</tr>
+</form>
+</body>
+</html>
